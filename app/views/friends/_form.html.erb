@@ -1,0 +1,42 @@
+<%= form_with(model: friend) do |form| %>
+  <% if friend.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(friend.errors.count, "error") %> prohibited this friend from being saved:</h2>
+
+      <ul>
+        <% friend.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :name, class: "control-label" %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :age, class: "control-label" %>
+    <%= form.number_field :age, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :money, class: "control-label" %>
+    <%= form.text_field :money, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :bdate, class: "control-label" %>
+    <%= form.date_select :bdate, class: "form-select" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :reg_date, class: "control-label" %>
+    <%= form.datetime_select :reg_date, class: "form-select" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "btn btn-primary"%>
+  </div>
+<% end %>

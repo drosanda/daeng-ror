@@ -1,0 +1,26 @@
+<div class="h-100 p-5 bg-light border rounded-3">
+  <h1 class="display-5 fw-bold"><%= @friend.name %></h1>
+  <p>
+    <strong>Age:</strong>
+    <%= @friend.age %>
+  </p>
+
+  <p>
+    <strong>Money:</strong>
+    <%= @friend.money %>
+  </p>
+
+  <p>
+    <strong>Bdate:</strong>
+    <%= @friend.bdate %>
+  </p>
+
+  <p>
+    <strong>Reg date:</strong>
+    <%= @friend.reg_date %>
+  </p>
+  <hr>
+  <%= link_to "Back", friends_path, class: "btn btn-dark" %>
+  <%= link_to "Edit", edit_friend_path(@friend), class: "btn btn-secondary" %>
+</div>
+        
